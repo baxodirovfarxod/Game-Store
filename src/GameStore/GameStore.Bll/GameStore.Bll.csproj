@@ -10,4 +10,16 @@
     <ProjectReference Include="..\GameStore.Repository\GameStore.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MappingProfile\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Validators\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+  </ItemGroup>
+
 </Project>

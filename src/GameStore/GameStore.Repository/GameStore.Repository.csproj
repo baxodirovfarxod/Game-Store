@@ -10,4 +10,8 @@
     <ProjectReference Include="..\GameStore.Dal\GameStore.Dal.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

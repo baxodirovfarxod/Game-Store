@@ -15,7 +15,6 @@ namespace GameStore.Dal.Configurations
         {
             builder.HasKey(p => p.Id);
             builder.Property(p => p.Id)
-                .ValueGeneratedOnAdd()
                 .IsRequired();
             builder.Property(p => p.Type)
                 .IsRequired()

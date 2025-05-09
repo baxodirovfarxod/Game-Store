@@ -10,5 +10,7 @@ namespace GameStore.Dal.Entities
     {
         public Guid Id { get; set; }
         public string Type { get; set; }
+        public ICollection<GamePlatform> GamePlatforms { get; set; }
+
     }
 }

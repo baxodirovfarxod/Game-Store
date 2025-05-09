@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <Folder Include="Validators\" />
+    <Folder Include="MappingProfile\" />
+    <Folder Include="Dtos\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

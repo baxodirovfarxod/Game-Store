@@ -13,6 +13,7 @@ namespace GameStore.Dal.Entities
         public Guid? ParentGenreId { get; set; }
         public Genre? ParentGenre { get; set; }
         public ICollection<Genre> SubGenres { get; set; } = new List<Genre>();
+        public ICollection<GameGenre> GameGenres { get; set; }
     }
 
 

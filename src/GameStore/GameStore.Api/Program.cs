@@ -1,5 +1,6 @@
 
 using GameStore.Api.Configurations;
+using GameStore.Api.ExceptionHandlingMiddleWare;
 
 namespace GameStore.Api
 {
@@ -26,11 +27,14 @@ namespace GameStore.Api
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
             app.UseResponseCaching();
 
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 
             app.MapControllers();

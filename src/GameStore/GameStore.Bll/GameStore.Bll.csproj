@@ -11,7 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+
     <Folder Include="MappingProfile\" />
+
+    <Folder Include="Validators\" />
+
   </ItemGroup>
 
   <ItemGroup>

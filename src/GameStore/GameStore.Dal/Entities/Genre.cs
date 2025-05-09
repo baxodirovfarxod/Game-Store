@@ -12,9 +12,7 @@ namespace GameStore.Dal.Entities
         public string Name { get; set; }
         public Guid? ParentGenreId { get; set; }
         public Genre? ParentGenre { get; set; }
-        public ICollection<Genre> SubGenres { get; set; } = new List<Genre>();
-        public ICollection<GameGenre> GameGenres { get; set; }
+        public List<Genre> SubGenres { get; set; } = new List<Genre>();
+        public List<GameGenre> GameGenres { get; set; }
     }
-
-
 }

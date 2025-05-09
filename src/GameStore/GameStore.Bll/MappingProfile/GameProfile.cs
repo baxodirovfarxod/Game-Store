@@ -8,10 +8,11 @@ public class GameProfile : Profile
 {
     public GameProfile()
     {
-        CreateMap<Game, GameDto>();
+        CreateMap<GameCreateDto, Game>()
+       .ForMember(dest => dest.GameGenres, opt => opt.Ignore())
+       .ForMember(dest => dest.GamePlatforms, opt => opt.Ignore())
+       .ReverseMap();
 
-        CreateMap<GameDto, Game>()
-            .ForMember(dest => dest.GameGenres, opt => opt.Ignore())
-            .ForMember(dest => dest.GamePlatforms, opt => opt.Ignore());
+        CreateMap<Game, GameGetDto>();
     }
 }

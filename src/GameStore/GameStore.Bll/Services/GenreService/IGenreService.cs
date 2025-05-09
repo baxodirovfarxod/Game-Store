@@ -1,7 +1,7 @@
 ﻿using GameStore.Bll.Dtos;
 using GameStore.Dal.Entities;
 
-namespace GameStore.Bll.Services;
+namespace GameStore.Bll.Services.GenreService.GenreService;
 
 public interface IGenreService
 {

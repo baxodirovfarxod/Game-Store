@@ -12,6 +12,7 @@ public class MainContext : DbContext
 
     public DbSet<Platform> Platforms { get; set; }
     public DbSet<Game> Games { get; set; }
+    public DbSet<Genre> Genres { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

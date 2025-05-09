@@ -1,5 +1,7 @@
 ﻿using GameStore.Bll.MappingProfile;
-using GameStore.Bll.Services;
+using GameStore.Bll.Services.GameService;
+using GameStore.Bll.Services.GenreService.GenreService;
+using GameStore.Repository.Repositories.GameRepository;
 using GameStore.Repository.Repositories.GenreRepository;
 
 namespace GameStore.Api.Configurations;
@@ -10,8 +12,14 @@ public static class DependencyInjectionConfigurations
     {
         builder.Services.AddResponseCaching();
         builder.Services.AddAutoMapper(typeof(GenreProfiles));
-        
+        builder.Services.AddAutoMapper(typeof(GameProfile));
+
         builder.Services.AddScoped<IGenreService, GenreService>();
         builder.Services.AddScoped<IGenreRepository, GenreRepository>();
+
+        builder.Services.AddScoped<IGameRepository, GameRepository>();
+        builder.Services.AddScoped<IGameService, GameService>();
+
+
     }
 }

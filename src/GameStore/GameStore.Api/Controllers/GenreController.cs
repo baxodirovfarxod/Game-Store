@@ -1,5 +1,5 @@
 ﻿using GameStore.Bll.Dtos;
-using GameStore.Bll.Services;
+using GameStore.Bll.Services.GenreService.GenreService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameStore.Api.Controllers

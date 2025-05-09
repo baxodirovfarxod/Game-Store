@@ -3,7 +3,7 @@ using GameStore.Bll.Dtos;
 using GameStore.Dal.Entities;
 using GameStore.Repository.Repositories.GenreRepository;
 
-namespace GameStore.Bll.Services;
+namespace GameStore.Bll.Services.GenreService.GenreService;
 
 public class GenreService : IGenreService
 {

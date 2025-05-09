@@ -26,6 +26,7 @@ namespace GameStore.Api
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseResponseCaching();
 
             app.UseHttpsRedirection();
 

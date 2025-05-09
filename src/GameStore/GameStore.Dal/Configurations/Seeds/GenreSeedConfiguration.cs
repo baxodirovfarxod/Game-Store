@@ -27,7 +27,7 @@ namespace GameStore.Dal.Configurations.Seeds
 
                 new Genre { Id = rpgId, Name = "RPG", ParentGenreId = null },
 
-                new Genre { Id = sportsId, Name = "Sports", ParentGenreId = null },
+                new Genre { Id = sportsId, Name = "Sports", ParentGenreId = null  },
                 new Genre { Id = Guid.Parse("33333333-3333-3333-3333-333333333333"), Name = "Races", ParentGenreId = sportsId },
                 new Genre { Id = Guid.Parse("44444444-4444-4444-4444-444444444444"), Name = "Rally", ParentGenreId = sportsId },
                 new Genre { Id = Guid.Parse("55555555-5555-5555-5555-555555555555"), Name = "Formula", ParentGenreId = sportsId },

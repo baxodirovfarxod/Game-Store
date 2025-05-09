@@ -24,6 +24,7 @@ public class GenreRepository : IGenreRepository
     {
         var genre = await SelectByIdAsync(id);
         mainContext.Genres.Remove(genre);
+        await mainContext.SaveChangesAsync();
     }
 
     public async Task<List<Genre>> SelectAllAsync()

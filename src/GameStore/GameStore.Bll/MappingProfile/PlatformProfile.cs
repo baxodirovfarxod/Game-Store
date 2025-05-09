@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using GameStore.Bll.Dtos;
+using GameStore.Dal.Entities;
 
 namespace GameStore.Bll.MappingProfile;
 

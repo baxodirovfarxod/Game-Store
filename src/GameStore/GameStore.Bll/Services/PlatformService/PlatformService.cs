@@ -26,6 +26,7 @@ namespace GameStore.Bll.Services.PlatformService
         {
             try
             {
+                if (dto == null) throw new ArgumentNullException(nameof(dto));
                 var platform = _mapper.Map<PlatformCreateDto, Platform>(dto);
                 platform.Id = Guid.NewGuid();   
                 await _platformRepository.CreateAsync(platform);
@@ -41,6 +42,7 @@ namespace GameStore.Bll.Services.PlatformService
         {
             try
             {
+                if (id == Guid.Empty) throw new ArgumentNullException(nameof(id));
                 var platform = await _platformRepository.GetByIdAsync(id);
                 await _platformRepository.DeleteAsync(platform);
             }
@@ -80,6 +82,7 @@ namespace GameStore.Bll.Services.PlatformService
         {
             try
             {
+                if (id == Guid.Empty) throw new ArgumentNullException(nameof(id));
                 var platform = await _platformRepository.GetByIdAsync(id);
                 if (platform == null) throw new Exception("Platform not found");
                 return _mapper.Map<Platform, PlatformDto>(platform);

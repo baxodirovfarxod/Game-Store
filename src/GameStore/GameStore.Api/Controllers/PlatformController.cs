@@ -19,7 +19,6 @@ namespace GameStore.Api.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> Create([FromBody] PlatformCreateDto platform)
         {
-                if (platform == null) throw new ArgumentNullException(nameof(platform));
                 await _platformService.CreateAsync(platform);
                 return Ok("Platform created successfully");
         }
@@ -27,7 +26,6 @@ namespace GameStore.Api.Controllers
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-                if (id == Guid.Empty) throw new ArgumentNullException(nameof(id));
                 await _platformService.DeleteAsync(id);
                 return Ok("Platform deleted successfully");
         }
@@ -42,10 +40,8 @@ namespace GameStore.Api.Controllers
         [HttpGet("getById/{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
-                if (id == Guid.Empty) throw new ArgumentNullException(nameof(id));
                 var platform = await _platformService.GetByIdAsync(id);
                 return Ok(platform);
-            
         }
     }
 }

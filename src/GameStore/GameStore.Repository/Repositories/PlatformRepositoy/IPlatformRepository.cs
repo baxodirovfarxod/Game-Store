@@ -13,7 +13,7 @@ namespace GameStore.Repository.Repositories.PlatformRepositoy
         Task<Platform> GetByIdAsync(Guid id);
         Task<List<Platform>> GetAllAsync();
         Task<List<Platform>> GetByGameKeyAsync(string key);
-        Task CreateAsync(Platform platform);
+        Task<Guid> CreateAsync(Platform platform);
         Task UpdateAsync(Platform platform);
         Task DeleteAsync(Platform platform);
     }

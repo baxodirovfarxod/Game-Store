@@ -22,13 +22,14 @@ namespace GameStore.Bll.Services.PlatformService
             _mapper = mapper;
         }
 
-        public async Task CreateAsync(PlatformCreateDto dto)
+        public async Task<Guid> CreateAsync(PlatformCreateDto dto)
         {
             try
             {
                 var platform = _mapper.Map<PlatformCreateDto, Platform>(dto);
                 platform.Id = Guid.NewGuid();   
                 await _platformRepository.CreateAsync(platform);
+                return platform.Id; 
             }
             catch (Exception ex)
             {

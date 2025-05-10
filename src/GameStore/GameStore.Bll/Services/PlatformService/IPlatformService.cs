@@ -7,7 +7,7 @@ namespace GameStore.Bll.Services.PlatformService
         Task<PlatformDto> GetByIdAsync(Guid id);
         Task<List<PlatformDto>> GetAllAsync();
         Task<List<PlatformDto>> GetByGameKeyAsync(string key);
-        Task CreateAsync(PlatformCreateDto dto);
+        Task<Guid> CreateAsync(PlatformCreateDto dto);
         Task UpdateAsync(PlatformCreateDto dto);
         Task DeleteAsync(Guid id);
     }

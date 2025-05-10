@@ -18,10 +18,11 @@ namespace GameStore.Repository.Repositories.PlatformRepositoy
             _mainContext = mainContext;
         }
 
-        public async Task CreateAsync(Platform platform)
+        public async Task<Guid> CreateAsync(Platform platform)
         {
             _mainContext.Platforms.Add(platform);
             await _mainContext.SaveChangesAsync();
+            return platform.Id;
         }
 
         public async Task DeleteAsync(Platform platform)

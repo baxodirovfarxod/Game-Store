@@ -9,7 +9,6 @@ public class MainContext : DbContext
       : base(options)
     {
     }
-
     public DbSet<GamePlatform> GamePlatforms { get; set; }
     public DbSet<Platform> Platforms { get; set; }
     public DbSet<Game> Games { get; set; }
